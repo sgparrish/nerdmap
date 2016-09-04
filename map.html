@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta name="google-site-verification" content="j55tsbNNDF7UsydE4kO0l8ObQU8mCYMe-MIz2sb177w" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+<script src="jquery.mousewheel.js"></script>
+<script src="mappoints.js"></script>
+<script src="map.js"></script>
+<style type="text/css">
+    body {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        font-family: arial,sans-serif;
+    }
+    #holder {
+        position: absolute;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+        z-index:-1;
+        background-color:#EBEBEB;
+    }
+    #base {
+        position: absolute;
+    }
+    #base a {
+        cursor: default;
+    }
+    #base img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+    #coords {
+        background-color: white;
+        border: 1px solid gray;
+        opapoint:0.8;
+        filter:alpha(opapoint=80); /* For IE8 and earlier */
+        position: absolute;
+        bottom: 5px; 
+        left: 5px;
+    }
+    #zoomdisplay {
+        background-color: white;
+        border: 1px solid gray;
+        opapoint:0.8;
+        filter:alpha(opapoint=80); /* For IE8 and earlier */
+        position: absolute;
+        bottom: 5px; 
+        right: 5px;
+    }
+    #header
+    {
+        position: absolute;
+        top: 0px;
+        left: 0px; 
+        width: 100%; 
+        font-size: 16px;
+        font-weight: bold;
+        background-color: white;
+        border: 1px solid gray;
+        opapoint:0.8;
+        filter:alpha(opapoint=80); /* For IE8 and earlier */
+    }
+    #campaigns
+    {
+        text-align: center;
+        float: right;
+        margin: 3px;
+        margin-right: 5px;
+    }
+
+    #searchbox
+    {
+        width:250px;
+        margin:3px;
+        margin-left: 5px;
+    }
+
+    #results
+    {
+        overflow: hidden;
+        position: absolute;
+        background-color: white;
+        opapoint:0.8;
+        filter:alpha(opapoint=80); /* For IE8 and earlier */
+        border: 1px solid gray;
+        margin:0;
+        padding:3px;
+        display: none;
+    }
+
+</style>
+</head>
+<body>
+<span id="coords"></span>
+<div id="header">
+    <input type="text" id="searchbox" placeholder="Type the name of a point..." />
+    <div id="results">results</div>
+</div>
+<div id="holder">
+    <div id="base">
+    </div>
+</div>
+</body>
+</html>
